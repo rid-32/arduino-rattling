@@ -11,7 +11,7 @@ void setup() {
 }
 
 bool hasNewPinLevel(const uint8_t pin, bool level) {
-  static const uint16_t DEBOUNCE_TIME = 20;
+  static const uint16_t DEBOUNCE_TIME = 50;
   static uint32_t lastTimestamp = 0;
   const bool pinState = digitalRead(pin);
   static bool lastPinState = pinState;
